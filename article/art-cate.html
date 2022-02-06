@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入layui.css -->
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css">
+  <!-- 引入本页面的css样式 -->
+  <link rel="stylesheet" href="/assets/css/article/art-cate.css">
+
+</head>
+
+<body>
+  <div class="layui-card">
+    <div class="layui-card-header">
+      <span>文章类别管理</span>
+      <button id="addCate" type="button" class="layui-btn layui-btn-normal layui-btn-sm">添加分类</button>
+    </div>
+    <div class="layui-card-body">
+      <table class="layui-table">
+        <colgroup>
+          <col width="150">
+          <col>
+          <col>
+          <col width="200">
+        </colgroup>
+        <thead>
+          <tr>
+            <th>序号</th>
+            <th>分类名称</th>
+            <th>分类别名</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr hidden>
+            <td>1</td>
+            <td>最新</td>
+            <td>Latest</td>
+            <td>
+              <button type="button" class="layui-btn layui-btn-xs">修改</button>
+              <button type="button" class="layui-btn layui-btn-xs layui-btn-danger">删除</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 引入layui.js文件 -->
+  <script src="/assets/lib/layui/layui.all.js"></script>
+  <!-- 导入jq.js文件 -->
+  <script src="/assets/lib/jquery.js"></script>
+  <!-- 引入axios.js 文件 -->
+  <script src="/assets/lib/axios.js"></script>
+  <!-- 引入公共的js文件 -->
+  <script src="/assets/js/public.js"></script>
+  <!-- 引入本页面的js文件 -->
+  <script src="/assets/js/article/art-cate.js"></script>
+
+</body>
+
+</html>

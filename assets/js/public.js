@@ -30,3 +30,20 @@ axios.interceptors.response.use(function (response) {
 }, function (error) {
   return Promise.reject(error)
 })
+
+// 格式化日期
+function formatDate(time) {
+  let dt = new Date(time)
+  let Y = dt.getFullYear()
+  let M = zeroize(dt.getMonth() + 1)
+  let D = zeroize(dt.getDate())
+
+  let h = zeroize(dt.getHours())
+  let m = zeroize(dt.getMinutes())
+  let s = zeroize(dt.getSeconds())
+  return `${Y}-${M}-${D}  ${h}:${m}:${s}`
+}
+
+function zeroize(n) {
+  return n < 10 ? '0' + n : n
+}
